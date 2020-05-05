@@ -5,5 +5,5 @@ addons:
     token:
       secure: $SONAR_TOKEN
 script:
-- yarn install
-- sonar-scanner
+  - yarn install
+  - sonar-scanner
