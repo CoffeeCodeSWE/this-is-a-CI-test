@@ -4,5 +4,4 @@ addons:
 
 script:
   - yarn install
-  - yarn test --coverage
   - sonar-scanner -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=this-is-a-CI-test
