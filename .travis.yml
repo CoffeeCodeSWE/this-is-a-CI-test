@@ -1,7 +1,7 @@
 addons:
   sonarcloud:
     organization: "coffeecodeswe"
-
+   
 script:
   - yarn install
   - sonar-scanner -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=CoffeeCodeSWE_this-is-a-CI-test
