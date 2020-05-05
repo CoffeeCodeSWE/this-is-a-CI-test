@@ -2,8 +2,8 @@ distr: trusty
 addons:
   sonarcloud:
     organization: coffeecodeswe
-  token:
-    secure: $SONAR_TOKEN
+    token:
+      secure: $SONAR_TOKEN
 script:
 - yarn install
 - sonar-scanner
