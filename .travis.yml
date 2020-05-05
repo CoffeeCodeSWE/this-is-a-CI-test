@@ -1,7 +1,11 @@
 addons:
   sonarcloud:
-    organization: "coffeecodeswe"
-   
+    organization: coffeecodeswe
+  token:
+    secure: $SONAR_TOKEN
 script:
-  - yarn install
-  - sonar-scanner -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=CoffeeCodeSWE_this-is-a-CI-test
+- yarn install
+- sonar-scanner -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=CoffeeCodeSWE_this-is-a-CI-test
+env:
+  global:
+    secure: bO/2nztv4jk39yzm0n7EaMxWSFVsraZSDXMC7Ea+APCe1J2vBNcrYPDyESKmqvM/bHBqreWGmdSNYImXbZtzX1AXFFvUzOKvjNTme9q+flQXkfxKuJgRxKDfPKcdGX1+dluLSlpclgBBYJfp3QnYurWsKPkUfzj6QWddNzS3Qn3WMAcYgcUxKZfO1y0IVwWWjVkIAk3bmnKtaSrGAc4Xv49XZTFurAi8eMQdvPifU7Gi2qLFrpZ1qF1ZXherCvU28PC91cukS5dhAzUdbH8WWXaut8cX1BrBVlsUAJFkyGBf8jRPSNuBzEvqWdkn53cSPu2R8Zzc9qjhd7wCEqdyMGaT6RNeKH9EhW2A9IeHyKJmddQGzDj0IwNFZQQ9rc0wqpss0zfp5noK7AvFfKHoANQln8x2WQsumeYGpB7mBRTZaBDCQ9qZPwRZ/7wSvvgXECu1mf/3YVb+NfFQxOUekteXHccAtYduyTlkMlBloGUZ5NnehT3sgbNNUQBgqr0W1PcTLoa+t9Gl+0foN0T2Li8/15hUhZqg4f9oyj2BB6IMJf78CHs+G5GY1wYQqJM6HlBnujye0OpZ5+gNiriwIpILOvMirSQG8t1dAITRl+2X2XxBWcneWO3jtovI2XKXz7r+ejtIffmbEwhUDT1w/JhxMB9TbH/UrIdYMaCdtUU=
