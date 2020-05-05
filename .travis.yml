@@ -9,6 +9,6 @@ addons:
       secure: "A7VNRz9DWagzUWrPthIpzcAgKYKl4ftaPj4lGnvK98iYNFZ2Ks7ZnFphuoFlbWvB29lQZVYI442beW9/ach/PoROQ7WUsQxfS71YdXlpbhuZwTFOFvMzUYQ2RqpTjO3YSV5exsZMvxzDoNMjrV08Z+s8uPYFE54oa1/cBMdX+dGnIirkbJ1bRjqVMPaXi45+d1x3U3R4ep5UcGRE0lsmZ0bYCxJCWZYOXWfhtip4fJUlUkNTUrKmq670fZkDDk2GpmlxfgOij968LBQtc1M5lnQYX9l3snd1XildjL7y3hYfd4f6piEv2MWrUx5GEmNaxzlS+aPeY0FCQFl0jKGlxp+8iKSJYGdp4y4ymunIM8oXmrK01KtYiGJ4yhNCFjgf3wd7TARp5yOl0/TgUwGcNnkdebYgsPOJDFRlBBt++hgClCBpLZoWprNkfbfXoO4UQq2y0K491AxwfHidzludAWyFrVlDRxnEIUHTauxaWUCKXstaxHRhPCh35x9SmemoMmU1dO2PHLr0xn25Z8CTOxKeSGh/OGh9Ztfkr1+uyA6SBCr+TDwj+KFZQn8UtdV3uCrp9zUIowXDnpm3dsED0La1bV5KQPfvBsWHhMCXTBzfLuGMqsVbGpEqhNEu6Z0x599fKLnhVwuhJJg6rX+mKbUrre1BvnTeNm31DkeZuj4="
 script:
   - git fetch --all
-
+  - for remote in `git branch -r`; do git branch --track ${remote#origin/} $remote; done
   - yarn install
   - sonar-scanner
